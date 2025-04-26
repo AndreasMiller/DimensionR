@@ -42,7 +42,7 @@
             <Button x:Name="R5" Click="R5_Click">R5</Button>
             <Button x:Name="R6" Click="R6_Click">R6</Button>
 
-            <CheckBox Content="Cube Special Case" Checked="SpecialCase_Checked" Unchecked="SpecialCase_Unchecked" />
+            <CheckBox Content="Show Topology for Hypercubes" Checked="SpecialCase_Checked" Unchecked="SpecialCase_Unchecked" />
         </StackPanel>
 
 
