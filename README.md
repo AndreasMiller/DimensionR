@@ -22,3 +22,6 @@ The algorithm works like this:
   3) determine the largest dot-product value, and its corresponding vertex index
   4) a small fraction of the random unit vector is then added to the vertex at that index
   5) repeat steps 1) through 4), over and over again
+
+
+*Written for Windows 11 using Visual Studio
