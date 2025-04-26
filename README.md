@@ -1,6 +1,6 @@
 DimensionR
 
-This app is a visualization tool for an algorithm that generates fundamental geomtry from an arbitrary number of vertices, 
+This app is a visualization tool for an algorithm that generates fundamental geometry from an arbitrary number of vertices, 
 with an arbitrary number of dimensions.
 
 In the most basic configuration, there are two parameters that need to be specified:
