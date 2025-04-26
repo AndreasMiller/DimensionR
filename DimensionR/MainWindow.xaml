@@ -1,0 +1,60 @@
+<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Window
+    x:Class="DimensionR.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DimensionR"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:canvas="using:Microsoft.Graphics.Canvas.UI.Xaml"
+    mc:Ignorable="d">
+
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Button x:Name="myButton" Click="myButton_Click">Reset</Button>
+            <Button x:Name="myButton2" Click="myButton2_Click">Show Values</Button>
+            <Button x:Name="myButton3" Click="myButton3_Click">Rotate</Button>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
+                <NumberBox x:Name="NumberBox_NumberOfDimensions"
+                Value="3"
+                SpinButtonPlacementMode="Hidden"
+                SmallChange="1"
+                LargeChange="10" ValueChanged="NumberBox_NumberOfDimensions_ValueChanged"/>
+
+                <NumberBox x:Name="NumberBox_NumberOfPoints"
+                Value="8"
+                SpinButtonPlacementMode="Hidden"
+                SmallChange="1"
+                LargeChange="10" ValueChanged="NumberBox_NumberOfPoints_ValueChanged"/>
+
+                <Slider x:Name="Slider_VisualDepth" Width="200" Minimum="0" Maximum="100" StepFrequency="1"
+                SmallChange="1" Value="100" ValueChanged="Slider_VisualDepth_ValueChanged" />
+                
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Height="Auto">
+            <Button x:Name="R3" Click="R3_Click">R3</Button>
+            <Button x:Name="R4" Click="R4_Click">R4</Button>
+            <Button x:Name="R5" Click="R5_Click">R5</Button>
+            <Button x:Name="R6" Click="R6_Click">R6</Button>
+
+            <CheckBox Content="Cube Special Case" Checked="SpecialCase_Checked" Unchecked="SpecialCase_Unchecked" />
+        </StackPanel>
+
+
+        <Canvas x:Name="FrameCanvas" Width="Auto" Height="Auto" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+
+            <canvas:CanvasControl x:Name="myCanvas" Canvas.Left="0" Canvas.Top="0"  Width="2500"  Height="1250" HorizontalAlignment="Right" VerticalAlignment="Bottom" PointerPressed="CanvasControl_PointerPressed" PointerReleased="CanvasControl_PointerReleased" PointerMoved="CanvasControl_PointerMoved" Draw="CanvasControl_Draw" ClearColor="CornflowerBlue">
+            </canvas:CanvasControl>
+
+            <!--                <local:PanelPart x:Name="myPanelPart" Canvas.Left="100" Canvas.Top="100" PointerPressed="PanelPart_PointerPressed" PointerReleased="PanelPart_PointerReleased" PointerMoved="PanelPart_PointerMoved" Width="75" Height="200" Background="Blue" Label="PanelPart"/> -->
+
+        </Canvas>
+
+    </StackPanel>
+</Window>
