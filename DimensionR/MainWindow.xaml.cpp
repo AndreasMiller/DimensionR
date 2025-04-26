@@ -1001,7 +1001,7 @@ namespace winrt::DimensionR::implementation
         auto nb{ sender.as<NumberBox>() };
 
         double newval = args.NewValue();
-        if (newval < 1.0) { newval = 1.0; }               // min
+        if (newval < 2.0) { newval = 2.0; }               // min
         if (newval > 100.0) { newval = 100.0; }           // max
         nb.Value(floor(newval));
 
