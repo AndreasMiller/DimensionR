@@ -18,19 +18,19 @@
             <Button x:Name="myButton2" Click="myButton2_Click">Show Values</Button>
             <Button x:Name="myButton3" Click="myButton3_Click">Rotate</Button>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
-                <NumberBox x:Name="NumberBox_NumberOfDimensions"
+                <NumberBox x:Name="NumberBox_NumberOfDimensions" Header="Dims"
                 Value="3"
                 SpinButtonPlacementMode="Hidden"
                 SmallChange="1"
                 LargeChange="10" ValueChanged="NumberBox_NumberOfDimensions_ValueChanged"/>
 
-                <NumberBox x:Name="NumberBox_NumberOfPoints"
+                <NumberBox x:Name="NumberBox_NumberOfPoints" Header="Verts"
                 Value="8"
                 SpinButtonPlacementMode="Hidden"
                 SmallChange="1"
                 LargeChange="10" ValueChanged="NumberBox_NumberOfPoints_ValueChanged"/>
 
-                <Slider x:Name="Slider_VisualDepth" Width="200" Minimum="0" Maximum="100" StepFrequency="1"
+                <Slider x:Name="Slider_VisualDepth" Header="Depth Effect" Width="200" Minimum="0" Maximum="100" StepFrequency="1"
                 SmallChange="1" Value="100" ValueChanged="Slider_VisualDepth_ValueChanged" />
                 
             </StackPanel>
